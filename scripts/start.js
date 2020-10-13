@@ -139,19 +139,11 @@ checkBrowsers(paths.appPath, isInteractive)
       }
 
       console.log(chalk.cyan('Starting the development server...\n'));
-<<<<<<< HEAD
       openBrowser(urls.localUrlForBrowser);
     });
 
     ['SIGINT', 'SIGTERM'].forEach(function (sig) {
       process.on(sig, function () {
-=======
-      // openBrowser(urls.localUrlForBrowser);
-    });
-
-    ['SIGINT', 'SIGTERM'].forEach(function(sig) {
-      process.on(sig, function() {
->>>>>>> d4c4f48268d3219b710e0835f6a3ce18c047afdb
         devServer.close();
         process.exit();
       });
@@ -159,11 +151,7 @@ checkBrowsers(paths.appPath, isInteractive)
 
     if (isInteractive || process.env.CI !== 'true') {
       // Gracefully exit when stdin ends
-<<<<<<< HEAD
       process.stdin.on('end', function () {
-=======
-      process.stdin.on('end', function() {
->>>>>>> d4c4f48268d3219b710e0835f6a3ce18c047afdb
         devServer.close();
         process.exit();
       });
